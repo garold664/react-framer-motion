@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
 
-import MotionTranstion from './components/MotionTransiton';
+import MotionTranstion from './pages/MotionTransiton';
 import { NavLink } from 'react-router-dom';
 
 function App() {
