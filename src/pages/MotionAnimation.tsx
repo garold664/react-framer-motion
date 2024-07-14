@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function MotionTransiton() {
+export default function MotionAnimation() {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <>
