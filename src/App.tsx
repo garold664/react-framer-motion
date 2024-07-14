@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 
 import MotionTranstion from './pages/MotionTransiton';
+import MotionAnimation from './pages/MotionAnimation';
 import { NavLink } from 'react-router-dom';
 
 function App() {
@@ -31,9 +32,11 @@ function App() {
         >
           <NavLink to="/">Home</NavLink>
           <NavLink to="/motion-transition">Motion Transition</NavLink>
+          <NavLink to="/motion-animation">Motion Animation</NavLink>
         </nav>
         <Routes>
           <Route path="/motion-transition" element={<MotionTranstion />} />
+          <Route path="/motion-animation" element={<MotionAnimation />} />
         </Routes>
       </main>
     </>
