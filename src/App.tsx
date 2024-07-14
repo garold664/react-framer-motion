@@ -5,6 +5,7 @@ import MotionTranstion from './pages/MotionTransiton';
 import MotionAnimation from './pages/MotionAnimation';
 import { NavLink } from 'react-router-dom';
 import MotionAndGestures from './pages/MotionAndGestures';
+import MotionAndAnimationControls from './pages/MotionAndAnimationControls';
 
 function App() {
   return (
@@ -35,11 +36,18 @@ function App() {
           <NavLink to="/motion-transition">Motion Transition</NavLink>
           <NavLink to="/motion-animation">Motion Animation</NavLink>
           <NavLink to="/motion-gestures">Motion and Gestures</NavLink>
+          <NavLink to="/motion-animation-controls">
+            Motion and Animation Controls
+          </NavLink>
         </nav>
         <Routes>
           <Route path="/motion-transition" element={<MotionTranstion />} />
           <Route path="/motion-animation" element={<MotionAnimation />} />
           <Route path="/motion-gestures" element={<MotionAndGestures />} />
+          <Route
+            path="/motion-animation-controls"
+            element={<MotionAndAnimationControls />}
+          />
         </Routes>
       </main>
     </>
