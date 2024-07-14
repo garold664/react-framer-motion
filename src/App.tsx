@@ -6,6 +6,7 @@ import MotionAnimation from './pages/MotionAnimation';
 import { NavLink } from 'react-router-dom';
 import MotionAndGestures from './pages/MotionAndGestures';
 import MotionAndAnimationControls from './pages/MotionAndAnimationControls';
+import MotionAndViewBasedAnimations from './pages/MotionAndViewBasedAnimations';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          height: '100vh',
+          minHeight: '100vh',
           gap: '24px',
         }}
       >
@@ -39,6 +40,9 @@ function App() {
           <NavLink to="/motion-animation-controls">
             Motion and Animation Controls
           </NavLink>
+          <NavLink to="/motion-view-based">
+            Motion and View Based Animations
+          </NavLink>
         </nav>
         <Routes>
           <Route path="/motion-transition" element={<MotionTranstion />} />
@@ -47,6 +51,10 @@ function App() {
           <Route
             path="/motion-animation-controls"
             element={<MotionAndAnimationControls />}
+          />
+          <Route
+            path="/motion-view-based"
+            element={<MotionAndViewBasedAnimations />}
           />
         </Routes>
       </main>
