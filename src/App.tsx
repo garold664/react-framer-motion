@@ -7,10 +7,38 @@ import { NavLink } from 'react-router-dom';
 import MotionAndGestures from './pages/MotionAndGestures';
 import MotionAndAnimationControls from './pages/MotionAndAnimationControls';
 import MotionAndViewBasedAnimations from './pages/MotionAndViewBasedAnimations';
+import MotionAndScrollAnimations from './pages/MotionAndScrollAnimations';
 
 function App() {
   return (
     <>
+      <nav
+        style={{
+          // position: 'sticky',
+          inset: 0,
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '2rem',
+          alignItems: 'center',
+          height: '10vh',
+          background: 'rgba(0,0,0,0.5)',
+        }}
+      >
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/motion-transition">Motion Transition</NavLink>
+        <NavLink to="/motion-animation">Motion Animation</NavLink>
+        <NavLink to="/motion-gestures">Motion and Gestures</NavLink>
+        <NavLink to="/motion-animation-controls">
+          Motion and Animation Controls
+        </NavLink>
+        <NavLink to="/motion-view-based">
+          Motion and View Based Animations
+        </NavLink>
+        <NavLink to="/motion-scroll">
+          Motion and Scroll Based Animations
+        </NavLink>
+      </nav>
       <main
         style={{
           display: 'flex',
@@ -21,29 +49,6 @@ function App() {
           gap: '24px',
         }}
       >
-        <nav
-          style={{
-            position: 'fixed',
-            inset: 0,
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '2rem',
-            alignItems: 'center',
-            height: '5vh',
-            background: 'rgba(0,0,0,0.5)',
-          }}
-        >
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/motion-transition">Motion Transition</NavLink>
-          <NavLink to="/motion-animation">Motion Animation</NavLink>
-          <NavLink to="/motion-gestures">Motion and Gestures</NavLink>
-          <NavLink to="/motion-animation-controls">
-            Motion and Animation Controls
-          </NavLink>
-          <NavLink to="/motion-view-based">
-            Motion and View Based Animations
-          </NavLink>
-        </nav>
         <Routes>
           <Route path="/motion-transition" element={<MotionTranstion />} />
           <Route path="/motion-animation" element={<MotionAnimation />} />
@@ -55,6 +60,10 @@ function App() {
           <Route
             path="/motion-view-based"
             element={<MotionAndViewBasedAnimations />}
+          />
+          <Route
+            path="/motion-scroll"
+            element={<MotionAndScrollAnimations />}
           />
         </Routes>
       </main>
